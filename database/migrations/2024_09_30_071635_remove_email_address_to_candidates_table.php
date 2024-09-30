@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::table('candidates', function (Blueprint $table) {
             $table->dropColumn('email_address');
-            $table->dropForeign(['category_id']); 
-            $table->dropColumn('category_id');
         });
     }
 
@@ -25,7 +23,6 @@ return new class extends Migration
     {
         Schema::table('candidates', function (Blueprint $table) {
             $table->string('email_address')->after('position');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 };

@@ -64,7 +64,7 @@
       </div>
   
       <!-- Menu Nav -->
-      <div v-if="showMenu" class="backdrop-blur-sm hover:backdrop-blur-lg bg-white/20  rounded-lg shadow-lg p-4 flex justify-between items-center fixed bottom-0 w-full mb-4">
+      <div v-if="showMenu" class="z-10 backdrop-blur-sm hover:backdrop-blur-lg bg-white/25  rounded-lg shadow-lg py-4 px-10 flex justify-between items-center fixed bottom-0 w-full mb-4">
         <small> Voting Credits Left: {{ this.voter.voting_credits - votedCandidates.length }}</small>
         <div class="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">

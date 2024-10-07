@@ -83,13 +83,15 @@
         <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all w-full sm:w-11/12 md:w-2/3 lg:w-1/2">
           <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
             <div class="sm:flex sm:items-start">
-              <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                <img :src="`/storage/${previewCandidate.image}`" alt="George Walker" class="h-12 w-12 min-w-[48px] rounded-full border-2 border-gray-200 z-0">
+              <div class="mx-auto flex items-center justify-center rounded-full bg-red-100 sm:mx-0" style="width: 45%; height: auto;">
+                <img :src="`/storage/${previewCandidate.image}`" alt="George Walker" class="w-full h-auto rounded-full border-2 border-gray-200 z-0">
               </div>
               <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                <h3 class="text-lg font-semibold leading-6 text-gray-900" id="modal-title">{{ previewCandidate.name }} <span> <small class="text-sm text-gray-500"><br> {{ previewCandidate.company }} </small></span> </h3>
+                <h3 class="text-lg font-semibold leading-6 text-gray-900" id="modal-title">
+                  {{ previewCandidate.name }}
+                  <span><small class="text-sm text-gray-500"><br>{{ previewCandidate.company }}</small></span>
+                </h3>
                 <div class="mt-2">
-                  
                   <p class="text-xs text-gray-500">{{ previewCandidate.position }}</p>
                 </div>
               </div>
@@ -101,6 +103,7 @@
         </div>
       </div>
     </div>
+
 
     <!-- Voted Candidates Preview -->
     <div v-if="submitModal" class="fixed inset-0 z-10 flex items-center justify-center">

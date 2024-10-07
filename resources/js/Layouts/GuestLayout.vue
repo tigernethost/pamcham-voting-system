@@ -5,16 +5,14 @@ import { Link } from '@inertiajs/vue3';
 
 <template>
     <div class="min-h-screen flex flex-col justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
-        <div>
-            <Link href="/">
-                <img :src="'/uploads/pamcham_logo2.jpg'"alt="" class="w-48">
-            </Link>
-        </div>
-
         <div
             class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg"
         >
             <slot />
         </div>
+
+        <small class="absolute bottom-4 text-gray-500 dark:text-gray-400">
+            <a href="https://tigernethost.com/">Powered by: Tigernethost, OPC</a>
+        </small>
     </div>
 </template>

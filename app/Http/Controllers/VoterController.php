@@ -21,8 +21,10 @@ class VoterController extends Controller
 
     public function votingBallot($uuid)
     {
-        $voter = Voter::where('uuid', $uuid)->with('candidates')->first();
-        
+        $voter = Voter::where('uuid', $uuid)->with('candidates')->first();        
+        $voter->update([
+            'is_scanned' => 1
+        ]);
 
         if(env('CANDIDATE_ORDER') === 'alphabetical') {
             $candidates = Candidate::orderBy('name', 'asc')->get();

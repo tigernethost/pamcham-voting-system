@@ -66,6 +66,11 @@ class VoterCrudController extends CrudController
             'width' => '50px',  // Adjust width as needed
         ]);
 
+        CRUD::column([
+            'label' => 'Is Scanned',
+            'name' => 'is_scanned',
+            'type' => 'check',
+        ]);
 
         // CRUD::setFromDb(); 
 
@@ -94,6 +99,12 @@ class VoterCrudController extends CrudController
         ]);
 
 
+        CRUD::column([
+            'label' => 'Is Scanned',
+            'name' => 'is_scanned',
+            'type' => 'check',
+        ]);
+
         // CRUD::setFromDb(); 
 
     }
@@ -110,7 +121,6 @@ class VoterCrudController extends CrudController
         // CRUD::setFromDb(); // set fields from db columns.
 
         CRUD::field('name');
-
 
     }
 
